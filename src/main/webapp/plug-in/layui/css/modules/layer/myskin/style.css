@@ -1,0 +1,22 @@
+body .layui-ext-yourskin .layui-layer-btn0
+{
+    height: 30px ;
+    width: 100px ;
+    font-size: 20px ;
+    border-radius: 15px ;
+}
+body .layui-ext-yourskin .layui-layer-btn1
+{
+    height: 30px ;
+    width: 100px ;
+    font-size: 20px ;
+    border-radius: 15px ;
+}
+body .layui-e-yourskin .layui-layer-btn1{
+    color: white;
+    background-color: orange;
+}
+body .layui-e-yourskin .layui-layer-btn2{
+    color: white;
+    background-color: red;
+}
