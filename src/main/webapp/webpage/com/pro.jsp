@@ -52,12 +52,12 @@
             <div class="logo"></div>
             <div class="muen">
                 <ul>
-                    <a href="/webpage/com/index.jsp"><li class="on">主頁</li></a>
-                    <a href="/webpage/com/about.jsp"><li>關於我們</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>全球</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>產品</li></a>
-                    <a href="/webpage/com/showpro.jsp"><li>選擇我們</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>聯絡我們</li></a>
+                    <a href="/webpage/com/index.jsp"><li >主页</li></a>
+                    <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
+                    <a href="/webpage/com/pro.jsp"><li class="on">全球</li></a>
+                    <a href="/webpage/com/pro.jsp"><li>产品</li></a>
+                    <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
+                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
                 </ul>
             </div>
             <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>

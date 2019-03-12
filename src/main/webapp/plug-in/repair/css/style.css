@@ -50,7 +50,7 @@ img {max-width: 100%;}
 .header .lang .cn{ width:60px; float:left; text-align:center; color:#fff; font-size:14px; background:#f1bb5d;}
 .header .lang .en{ width:60px; float:left; text-align:center; color:#fff; font-size:14px; background:#4393d6;}
 
-.bannerbg{ height:427px; background:url(../images/bannerbg.jpg) no-repeat center;}
+.bannerbg{ height:427px; background:url(../images/top.jpg) no-repeat center;}
 
 .inpronr{ padding:35px 0; background:url(../images/bg.jpg) no-repeat bottom center;}
 .inpronr ul li{ width:290px; height:197px; overflow:hidden; margin:0 5px; float:left; position:relative;}

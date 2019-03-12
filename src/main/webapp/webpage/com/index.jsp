@@ -52,15 +52,15 @@
             <div class="logo"></div>
             <div class="muen">
                 <ul>
-                    <a href="/webpage/com/index.jsp"><li class="on">主頁</li></a>
-                    <a href="/webpage/com/about.jsp"><li>關於我們</li></a>
+                    <a href="/webpage/com/index.jsp"><li class="on">主页</li></a>
+                    <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
                     <a href="/webpage/com/pro.jsp"><li>全球</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>產品</li></a>
-                    <a href="/webpage/com/showpro.jsp"><li>選擇我們</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>聯絡我們</li></a>
+                    <a href="/webpage/com/pro.jsp"><li>产品</li></a>
+                    <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
+                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
                 </ul>
             </div>
-            <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>
+            <%--<div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>--%>
             <div class="clean"></div>
         </div>
     </div>
@@ -69,12 +69,12 @@
         <div class="blank50"></div>
         <div class="banner">
             <div class="bd">
-                <ul>
-                    <li style="background:url(/plug-in/repair/images/banner1.png) #fff center 0 no-repeat;"><a target="_blank" href=""></a></li>
-                    <li style="background:url(/plug-in/repair/images/banner2.png) #fff center 0 no-repeat;"><a target="_blank" href=""></a></li>
-                </ul>
+                <%--<ul>--%>
+                    <%--<li style="background:url(/plug-in/repair/images/banner1.png) #fff center 0 no-repeat;"><a target="_blank" href=""></a></li>--%>
+                    <%--<li style="background:url(/plug-in/repair/images/banner2.png) #fff center 0 no-repeat;"><a target="_blank" href=""></a></li>--%>
+                <%--</ul>--%>
             </div>
-            <a class="prev"></a><a class="next"></a>
+            <%--<a class="prev"></a><a class="next"></a>--%>
         </div>
         <script type="text/javascript">
             jQuery(".banner").slide({titCell:".hd ul", mainCell:".bd ul",prevCell:".prev",nextCell:".next",effect:"fold",autoPlay:true, autoPage:true,trigger:"click" });
@@ -84,10 +84,10 @@
     <div class="inpronr">
         <div class="content">
             <ul>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/index_01.jpg"></div><div class="fgc"><div class="tit">全新流動電話</div><div class="jj">智能手机，是指像个人电脑一样，具有独立的操作系统，独立的运行空间...</div><div class="more">+</div></div></li></a>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/index_01.jpg"></div><div class="fgc"><div class="tit">全新流動電話</div><div class="jj">智能手机，是指像个人电脑一样，具有独立的操作系统，独立的运行空间...</div><div class="more">+</div></div></li></a>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/index_01.jpg"></div><div class="fgc"><div class="tit">全新流動電話</div><div class="jj">智能手机，是指像个人电脑一样，具有独立的操作系统，独立的运行空间...</div><div class="more">+</div></div></li></a>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/index_01.jpg"></div><div class="fgc"><div class="tit">全新流動電話</div><div class="jj">智能手机，是指像个人电脑一样，具有独立的操作系统，独立的运行空间...</div><div class="more">+</div></div></li></a>
+                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/one.jpg"></div><div class="fgc"><div class="tit">iPhone内存升级</div><div class="jj">告别内存不足  容量轻松升级 ￥159元起</div><div class="more">+</div></div></li></a>
+                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/tow.jpg"></div><div class="fgc"><div class="tit">iPhone内存更换</div><div class="jj">提升续航 免费上门 保修360天 ￥129元起</div><div class="more">+</div></div></li></a>
+                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/three.jpg"></div><div class="fgc"><div class="tit">iPhone屏幕更换</div><div class="jj">屏幕快速换新 极速响应 免费上门 ￥149元起</div><div class="more">+</div></div></li></a>
+                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/four.jpg"></div><div class="fgc"><div class="tit">MacBook系列维修</div><div class="jj">数百种Macbook问题 ￥98元起</div><div class="more">+</div></div></li></a>
                 <div class="clean"></div>
             </ul>
         </div>
@@ -96,32 +96,32 @@
     <div class="footer">
         <div class="content">
             <div class="fnav">
-                <div class="tit">關於我們</div>
-                <a href="#">公司簡介</a>
+                <div class="tit">关于我们</div>
+                <a href="#">公司简介</a>
                 <a href="#">公司簡介</a>
                 <a href="#">公司簡介</a>
             </div>
             <div class="fnav">
                 <div class="tit">全球性</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">產品</div>
-                <a href="#">公司簡介</a>
+                <a href="#">公司简介</a>
                 <a href="#">公司簡介</a>
                 <a href="#">公司簡介</a>
             </div>
             <div class="fnav">
-                <div class="tit">選擇我們</div>
-                <a href="#">公司簡介</a>
+                <div class="tit">产品</div>
+                <a href="#">公司简介</a>
                 <a href="#">公司簡介</a>
                 <a href="#">公司簡介</a>
             </div>
             <div class="fnav">
-                <div class="tit">聯繫我們</div>
+                <div class="tit">选择我们</div>
+                <a href="#">公司简介</a>
                 <a href="#">公司簡介</a>
+                <a href="#">公司簡介</a>
+            </div>
+            <div class="fnav">
+                <div class="tit">连续我们</div>
+                <a href="#">公司简介</a>
                 <a href="#">公司簡介</a>
                 <a href="#">公司簡介</a>
             </div>
