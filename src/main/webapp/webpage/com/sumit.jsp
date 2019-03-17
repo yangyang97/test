@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 123
@@ -53,12 +52,12 @@
             <div class="logo"></div>
             <div class="muen">
                 <ul>
-                    <a href="/webpage/com/index.jsp"><li >主页</li></a>
+                    <a href="/webpage/com/index.jsp"><li>主页</li></a>
                     <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
-                    <a href="/webpage/com/pro.jsp"><li class="on">全球</li></a>
+                    <a href="/webpage/com/pro.jsp"><li>全球</li></a>
                     <a href="/webpage/com/pro.jsp"><li>产品</li></a>
                     <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
+                    <a href="/webpage/com/contact.jsp"><li  class="on">联络我们</li></a>
                 </ul>
             </div>
             <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>
@@ -71,44 +70,83 @@
         <div class="nybanner" style="background:url(/plug-in/repair/images/nybanner.jpg) no-repeat center;"></div>
         <div class="blank25"></div>
         <div class="content">
-            <div class="inleft">
-                <div class="title">手机快修专家</div>
-                <a href="#"><div class="li on">iPhone内存升级</div></a>
-                <a href="#"><div class="li">iPhone电池更换</div></a>
-                <a href="#"><div class="li">iPhone屏幕更换</div></a>
-                <a href="#"><div class="li">MacBook系列维修</div></a>
-                <div class="blank25"></div>
-                <div class="title">聯絡我們</div>
-                <div class="li">電話 : +852-37053270</div>
-                <div class="li">傳真 : +852-37053271</div>
-                <div class="li">郵箱：sales@cellplushk.com</div>
-                <div class="blank25"></div>
-            </div>
 
-            <div class="inright">
-                <div class="nylmtit"><a class="lmnav on">专注才是专业</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
-                <div class="nypro">
-                    <ul>
+            <div class="inright1">
+                <div class="nylmtit"><a class="lmnav on">维修提交</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
+                <div class="nycontact">
+                    <div class="wz">
+                        <h1 style="font-size:25px">品牌机型：iphone8</h1><br/>
+                        <h2 style="font-size:15px">免费上门&nbsp&nbsp&nbsp20分钟快修&nbsp&nbsp&nbsp修完付款</h2><br/>
+                        <h3 style="font-size:10px">用户在使用本服务的过程中，可能需要填写或提交一些必要的信息，如法律法规等规章规范性文件 （以下称“法律法规”）规定的需要填写的身份信息。
+                        如用户提交的信息不完整或不符合法律法规的 规定，则用户可能无法使用本服务或在使用本服务的过程中受到限制。
+                        个人隐私信息是指涉及用户个人身份或个人隐私的信息，比如，用户真实姓名、手机号码、手机 设备识别码、详细地址等等。
+                        非个人隐私信息是指用户对本服务的操作状态以及使用习惯等明确 且客观反映在闪修侠服务器端的基本记录信息、个人隐私信息范围外的其它普通信息，
+                            以及用户 同意公开的上述隐私信息</h3><br/>
+                    </div>
+                    <div class="pic"><img src="/plug-in/repair/images/iPhone8.jpg"></div>
+                    <div class="blank25"></div>
 
-                        <a href="#">
-                            <c:forEach items="${phonelist}" var="obj">
-                            <li>
-                                <div class="pic"><img src="${obj.phone_photo}"></div>
-                                <div class="tit">${obj.phone_name}</div>
-                                <div class="more">更多信息></div>
-                            </li>
-                            </c:forEach>
-                                </a>
-                        <div class="clean"></div>
+                    <div class="rightcon">
+                        <div class="title">故障类型</div>
+                        <div class="propj" style="padding:0;">
+                            <form name="form1">
+                                <input type="text" class="text" placeholder="机型颜色">
+                                <input type="text" class="text" placeholder="手机联系人">
+                                <input type="text" class="text" placeholder="联系地址">
+                                <input type="text" class="text" placeholder="手机号码">
+                                <select class="text" name="province" onclick="getCity()">
+                                    <option value="0">请选择故障类型</option>
+                                    <option value="1">屏幕问题(更换总成 旧屏回收)</option>
+                                    <option value="2">电池/充电问题</option>
+                                    <option value="3">摄像头问题</option>
+                                    <option value="4">按键问题</option>
+                                    <option value="5">声音问题</option>
+                                    <option value="6">进水/无法开机/手机摔坏问题</option>
+                                    <option value="7">其他问题</option>
+                                </select>
+                                <SELECT class="text" name="city" >
+                                    <OPTION VALUE="0">请选择故障类型 </OPTION>
+                                </SELECT>
+                                <script>
+                                    //定义了故障的二维数组，
+                                    var city=[
+                                        [" 内屏显示异常","外屏碎"],
+                                        ["充电","电池"],
+                                        ["闪光灯","后摄像头","前摄像头"],
+                                        ["音量键","HOME键","电源键","静音键"],
+                                        ["扬声器","耳机","听筒"],
+                                        ["主板问题","手机严重损坏","进水"],
+                                        ["重装调试","软件故障","刷机错误","感应区"],
+                                    ];
 
-                    </ul>
-                </div>
-                <div class="page">
-                    <a href="#">上一頁</a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">下一頁</a>
+                                    function getCity(){
+                                        //获得省份下拉框的对象
+                                        var sltProvince=document.form1.province;
+                                        //获得城市下拉框的对象
+                                        var sltCity=document.form1.city;
+
+                                        //得到对应省份的城市数组
+                                        var provinceCity=city[sltProvince.selectedIndex - 1];
+
+                                        //清空城市下拉框，仅留提示选项
+                                        sltCity.length=1;
+
+                                        //将城市数组中的值填充到城市下拉框中
+                                        for(var i=0;i<provinceCity.length;i++){
+                                            //Option(选项描述，选项值) 等价于 <option value="选项值" >选项描述</option>;
+                                            sltCity[i+1]=new Option(provinceCity[i],provinceCity[i]);
+                                        }
+                                    }
+                                </script>
+
+                                <textarea class="textarea" placeholder="请认真填写备注 我们会根据您的备注来给你制定维修计划"></textarea>
+                                <%--<div class="codenr"><input type="text" class="text" placeholder="驗證碼" style=" width:160px;"> 1234</div>--%>
+                                <div class="clean"></div>
+                                <input type="submit" value="立即提交" class="sub">
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="blank25"></div>
@@ -173,6 +211,7 @@
     </div>
 
     <div class="page-down" title="back to the top"><i class="fa fa-angle-up"></i></div>
+
     <script>
         //返回顶部
         $(window).scroll(function () {
@@ -212,3 +251,4 @@
 
 </body>
 </html>
+

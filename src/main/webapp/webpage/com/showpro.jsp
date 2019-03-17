@@ -89,20 +89,12 @@
                 <div class="showpro">
                     <div class="pic"><img src="/plug-in/repair/images/pro.jpg" width="226" height="298"></div>
                     <div class="nr">
-                        <div class="tit">Galaxy J3 Pro</div>
+                        <div class="tit">名字</div>
                         容量: 16GB<br/>
                         顏色: 黑色/ 白色 / 金色<br/>
-                        顯示器:<br/>
-                        5 吋 (對角線)<br/>
-                        720×1280 解像度<br/>
-                        294 PPI<br/>
-                        相機:<br/>
-                        800萬像素，自動對焦，LED閃光燈<br/>
-                        重量及尺寸:<br/>
-                        高度：142.2 毫米 (5.6吋)<br/>
-                        寬度：71.3 毫米 (2.81吋)<br/>
-                        厚度：8 毫米 (0.31吋)<br/>
-                        重量：139 克 (4.9安士)
+                        价格：XXXX<br/>
+                        备注：XXXXXX<br/>
+
                     </div>
                     <div class="clean"></div>
                 </div>
