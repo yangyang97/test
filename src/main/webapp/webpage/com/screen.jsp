@@ -89,28 +89,28 @@
                     <div class="rightcon">
                         <div class="title">屏幕更换</div>
                         <div class="propj" style="padding:0;">
-                            <form name="form1">
+                            <form name="form1" class="applySpecialform">
                                 <select id="number" class="text" name="province" onclick="getCity()">
-                                    <option value="0">请选择机型</option>
-                                    <option value="459">IPhone X</option>
-                                    <option value="499">IPhone X MAX</option>
-                                    <option value="359">IPhone 8</option>
-                                    <option value="399">IPhone 8plus</option>
-                                    <option value="259">IPhone 7</option>
-                                    <option value="269">IPhone 7 plus</option>
-                                    <option value="189">IPhone 6s </option>
-                                    <option value="199">IPhone 6s plus</option>
-                                    <option value="159">IPhone 6 </option>
-                                    <option value="179">IPhone 6 plus</option>
-                                    <option value="149">IPhone 5</option>
-                                    <option value="149">IPhone 5s</option>
+                                    <option class="checkbox-type" value="0">请选择机型</option>
+                                    <option class="checkbox-type" tip="IPhone X" value="469">IPhone X</option>
+                                    <option class="checkbox-type" tip="IPhone X MAX" value="499">IPhone X MAX</option>
+                                    <option class="checkbox-type" tip="IPhone 8" value="339">IPhone 8</option>
+                                    <option class="checkbox-type" tip="IPhone 8plus" value="389">IPhone 8plus</option>
+                                    <option class="checkbox-type" tip="IPhone 7" value="219">IPhone 7</option>
+                                    <option class="checkbox-type" tip="IPhone 7 plus" value="249">IPhone 7 plus</option>
+                                    <option class="checkbox-type" tip="IPhone 6s" value="179">IPhone 6s </option>
+                                    <option class="checkbox-type" tip="IPhone 6s plus" value="199">IPhone 6s plus</option>
+                                    <option class="checkbox-type" tip="IPhone 6" value="159">IPhone 6 </option>
+                                    <option class="checkbox-type" tip="IPhone 6 plus" value="179">IPhone 6 plus</option>
+                                    <option class="checkbox-type" tip="IPhone 5" value="149">IPhone 5</option>
+                                    <option class="checkbox-type" tip="IPhone 5s" value="149">IPhone 5s</option>
                                 </select>
-                                <input type="text" class="text" placeholder="手机联系人">
-                                <input type="text" class="text" placeholder="请填写联系地址">
-                                <input type="text" class="text" placeholder="手机号码">
+                                <input  NAME="pohoe" type="text" class="text" placeholder="手机联系人" >
+                                <input name="adl" type="text" class="text" placeholder="联系地址">
+                                <input name="num" type="text" class="text" placeholder="手机号码">
 
 
-                                <textarea class="textarea" placeholder="请认真填写备注 我们会根据您的备注来给你制定维修计划"></textarea>
+                                <textarea name="remark" class="textarea" placeholder="请认真填写备注 我们会根据您的备注来给你制定维修计划"></textarea>
                                 <h1 style="color:red ; font-size:20px">您应付款：￥<input style="color:red ; font-size:20px" id="tax1" type="text" value="0"></h1>
                                 <script>
                                     function getCity(){
@@ -121,8 +121,9 @@
                                 </script>
                                 <%--<div class="codenr"><input type="text" class="text" placeholder="驗證碼" style=" width:160px;"> 1234</div>--%>
                                 <div class="clean"></div>
-                                <input type="submit" value="立即提交" class="sub">
                             </form>
+                            <input value="立即提交" onclick="tuueueu(3)" class="sub">
+
                         </div>
                     </div>
 
@@ -185,11 +186,76 @@
     </div>
     <div class="banq">
         <div class="content">
-            Copyright © 2005 - 2015 東益科技有限公司 All Rights Reserved.
+            Copyright © 2019 - 2029 闪电侠科技有限公司 All Rights Reserved.
         </div>
     </div>
 
     <div class="page-down" title="back to the top"><i class="fa fa-angle-up"></i></div>
+
+    <script>
+        function tuueueu(e) {
+            var submitTtpe = true;
+            $(".applySpecialform input[type='text']").each(function(){
+                if($(this).val()==null||$(this).val()==""){
+                    submitTtpe = false;
+                }
+            });
+            if(submitTtpe){
+
+                var s = "";
+                $(".checkbox-type").each(function () {
+                    var r = $(this).is(':checked');
+                    console.log(r);
+                    if(r){
+                        s += $(this).val()+",";
+                    }
+                });
+                var i=$("#number option:selected").attr('tip');
+                $("#c009").val(s);
+                $(".applySpecialform").each(function(){
+                    var data=$(".applySpecialform").serialize();
+                    var baseWare = dataMethod(data);
+                    $.ajax({
+                        async: false,
+                        type: "POST",
+                        url:'sumbitController.do?PhoneList',
+                        data:{data:baseWare,submitTtpe:i,type:e},
+                        success: function (result) {
+                            alert("提交成功");
+                            location.reload(true);
+
+
+                        },
+                        error: function (result) {
+                            alert("提交失败");
+                            location.reload(true);
+                        }
+                    })
+                });
+            }else {
+                alert("请填写详细信息");
+            }
+        }
+
+
+
+        //form转为json
+        function dataMethod(data) {
+
+            var data= decodeURIComponent(data,true);//防止中文乱码
+            var dataJson=DataDeal.formToJson(data);//转化为json
+            return dataJson;
+        }
+        var DataDeal = {
+            //将从form中通过$('#form').serialize()获取的值转成json
+            formToJson: function (data) {
+                data=data.replace(/&/g,"\",\"");
+                data=data.replace(/=/g,"\":\"");
+                data="{\""+data+"\"}";
+                return data;
+            },
+        };
+    </script>
 
     <script>
         //返回顶部

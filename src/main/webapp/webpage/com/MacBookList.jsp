@@ -73,9 +73,9 @@
         <div class="content">
             <div class="inleft">
                 <div class="title">手机快修专家</div>
-                <a href="/PhoneController.do?PhoneList"><div class="li on">全系列</div></a>
-                <a href="/PhoneController.do?IPhone"><div class="li">iPhone专区</div></a>
-                <a href="/PhoneController.do?MacBook"><div class="li">MacBook专区</div></a>
+                <a href="/PhoneController.do?PhoneList&type=0"><div class="li on">全系列</div></a>
+                <a href="/PhoneController.do?PhoneList&type=1"><div class="li">iPhone专区</div></a>
+                <a href="/PhoneController.do?PhoneList&type=2"><div class="li">MacBook专区</div></a>
                 <div class="blank25"></div>
                 <div class="title">联系我们</div>
                 <div class="li">电话 : XXXXXXXXXXXXXXXX</div>
@@ -88,30 +88,25 @@
                 <div class="nylmtit"><a class="lmnav on">专注才是专业</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
                 <div class="nypro">
                     <ul>
-                            <c:forEach items="${phonelist}" var="obj">
-                                <a href="PhoneController.do?Phonedetail&id=${obj.id}">
+                        <c:forEach items="${phonelist}" var="obj">
+                        <a href="PhoneController.do?Phonedetail&id=${obj.id}">
                             <li>
                                 <div class="pic"><img src="${obj.phone_photo}"></div>
                                 <div class="tit">${obj.phone_name}</div>
                                 <div class="more">选择机型></div>
                             </li>
                             </c:forEach>
-                                </a>
+                        </a>
                         <div class="clean"></div>
 
                     </ul>
                 </div>
                 <div class="page">
-                    <c:if test="${page ==1}">
-                        <a href="/PhoneController.do?PhoneList&page=1">上一页</a>
-                    </c:if>
-                    <c:if test="${page >1}">
-                        <a href="/PhoneController.do?PhoneList&page=${page-1}">上一页</a>
-                    </c:if>
-                    <a href="/PhoneController.do?PhoneList&page=1">1</a>
-                    <a href="/PhoneController.do?PhoneList&page=2">2</a>
-                    <a href="/PhoneController.do?PhoneList&page=3">3</a>
-                    <a href="#">下一页</a>
+                    <a href="#">上一頁</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">下一頁</a>
                 </div>
             </div>
             <div class="blank25"></div>

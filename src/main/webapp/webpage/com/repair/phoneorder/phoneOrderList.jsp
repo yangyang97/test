@@ -5,33 +5,25 @@
   <div region="center" style="padding:0px;border:0px">
   <t:datagrid name="phoneOrderList" checkbox="false" pagination="true" fitColumns="true" title="订单表" actionUrl="phoneOrderController.do?datagrid" idField="id" sortName="createDate" fit="true" queryMode="group">
    <t:dgCol title="主键"  field="id"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="创建人名称"  field="createName"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="创建人登录名称"  field="createBy"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="创建日期"  field="createDate"  formatter="yyyy-MM-dd"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="更新人名称"  field="updateName"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="更新人登录名称"  field="updateBy"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="更新日期"  field="updateDate"  formatter="yyyy-MM-dd"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="所属部门"  field="sysOrgCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="所属公司"  field="sysCompanyCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="流程状态"  field="bpmStatus"  queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>
    <t:dgCol title="订单手机名称"  field="orderName"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="订单日期"  field="orderTime"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="订单颜色"  field="orderColor"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="维修方式"  field="orderWay"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="订单日期"  field="orderTime"  formatter="yyyy-MM-dd hh:mm" queryMode="single"  width="120"></t:dgCol>
+   <%--<t:dgCol title="订单颜色"  field="orderColor"  queryMode="single"  width="120"></t:dgCol>--%>
+   <t:dgCol title="订单地址"  field="orderWay"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="故障类型"  field="orderType"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="预留信息"  field="orderNamem"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="电话"  field="orderTel"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="金额"  field="orderMemo"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="备注"  field="orderRemark"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="预留"  field="orderMemo"  queryMode="single"  width="120"></t:dgCol>
+
    <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
    <t:dgDelOpt title="删除" url="phoneOrderController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>
-   <t:dgToolBar title="录入" icon="icon-add" url="phoneOrderController.do?goAdd" funname="add"  width="768"></t:dgToolBar>
-   <t:dgToolBar title="编辑" icon="icon-edit" url="phoneOrderController.do?goUpdate" funname="update"  width="768"></t:dgToolBar>
-   <t:dgToolBar title="批量删除"  icon="icon-remove" url="phoneOrderController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>
+   <%--<t:dgToolBar title="录入" icon="icon-add" url="phoneOrderController.do?goAdd" funname="add"  width="768"></t:dgToolBar>--%>
+   <%--<t:dgToolBar title="编辑" icon="icon-edit" url="phoneOrderController.do?goUpdate" funname="update"  width="768"></t:dgToolBar>--%>
+   <%--<t:dgToolBar title="批量删除"  icon="icon-remove" url="phoneOrderController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>--%>
    <t:dgToolBar title="查看" icon="icon-search" url="phoneOrderController.do?goUpdate" funname="detail"  width="768"></t:dgToolBar>
-   <t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>
-   <t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>
-   <t:dgToolBar title="模板下载" icon="icon-putout" funname="ExportXlsByT"></t:dgToolBar>
+   <%--<t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>--%>
+   <%--<t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>--%>
+   <%--<t:dgToolBar title="模板下载" icon="icon-putout" funname="ExportXlsByT"></t:dgToolBar>--%>
   </t:datagrid>
   </div>
  </div>
