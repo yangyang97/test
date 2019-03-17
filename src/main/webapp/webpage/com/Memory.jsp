@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 123
@@ -53,12 +52,12 @@
             <div class="logo"></div>
             <div class="muen">
                 <ul>
-                    <a href="/webpage/com/index.jsp"><li >主页</li></a>
+                    <a href="/webpage/com/index.jsp"><li>主页</li></a>
                     <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
-                    <a href="/webpage/com/pro.jsp"><li class="on">全球</li></a>
+                    <a href="/webpage/com/pro.jsp"><li>全球</li></a>
                     <a href="/webpage/com/pro.jsp"><li>产品</li></a>
                     <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
+                    <a href="/webpage/com/contact.jsp"><li  class="on">联络我们</li></a>
                 </ul>
             </div>
             <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>
@@ -71,43 +70,62 @@
         <div class="nybanner" style="background:url(/plug-in/repair/images/nybanner.jpg) no-repeat center;"></div>
         <div class="blank25"></div>
         <div class="content">
-            <div class="inleft">
-                <div class="title">手机快修专家</div>
-                <a href="#"><div class="li on">iPhone内存升级</div></a>
-                <a href="#"><div class="li">iPhone电池更换</div></a>
-                <a href="#"><div class="li">iPhone屏幕更换</div></a>
-                <a href="#"><div class="li">MacBook系列维修</div></a>
-                <div class="blank25"></div>
-                <div class="title">联系我们</div>
-                <div class="li">电话 : XXXXXXXXXXXXXXXX</div>
-                <div class="li">地址：XXXXXXXXXXXXX</div>
-                <div class="li">邮箱：xxxxxxx@xxxxx.com</div>
-                <div class="blank25"></div>
-            </div>
 
-            <div class="inright">
-                <div class="nylmtit"><a class="lmnav on">专注才是专业</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
-                <div class="nypro">
-                    <ul>
-                            <c:forEach items="${phonelist}" var="obj">
-                                <a href="PhoneController.do?Phonedetail&id=${obj.id}">
-                            <li>
-                                <div class="pic"><img src="${obj.phone_photo}"></div>
-                                <div class="tit">${obj.phone_name}</div>
-                                <div class="more">选择机型></div>
-                            </li>
-                            </c:forEach>
-                                </a>
-                        <div class="clean"></div>
+            <div class="inright1">
+                <div class="nylmtit"><a class="lmnav on">维修提交</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">内存升级</a></div><div class="clean"></div></div>
+                <div class="nycontact">
+                    <div class="wz">
+                        <h1 style="font-size:25px">内存升级：￥159元起</h1><br/>
+                        <h2 style="font-size:15px">免费上门&nbsp&nbsp&nbsp20分钟快修&nbsp&nbsp&nbsp修完付款</h2><br/>
+                        <h3 style="font-size:10px">用户在使用本服务的过程中，可能需要填写或提交一些必要的信息，如法律法规等规章规范性文件 （以下称“法律法规”）规定的需要填写的身份信息。
+                            如用户提交的信息不完整或不符合法律法规的 规定，则用户可能无法使用本服务或在使用本服务的过程中受到限制。
+                            个人隐私信息是指涉及用户个人身份或个人隐私的信息，比如，用户真实姓名、手机号码、手机 设备识别码、详细地址等等。
+                            非个人隐私信息是指用户对本服务的操作状态以及使用习惯等明确 且客观反映在闪修侠服务器端的基本记录信息、个人隐私信息范围外的其它普通信息，
+                            以及用户 同意公开的上述隐私信息</h3><br/>
+                    </div>
+                    <div class="pic"><img src="/plug-in/repair/images/mory.jpg"></div>
+                    <div class="blank25"></div>
 
-                    </ul>
-                </div>
-                <div class="page">
-                    <a href="#">上一頁</a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">下一頁</a>
+                    <div class="rightcon">
+                        <div class="title">内存升级</div>
+                        <div class="propj" style="padding:0;">
+                            <form name="form1" class="applySpecialform">
+                                <select id="number" class="text" name="province" onclick="getCity()">
+                                    <option value="0">请选择机型</option>
+                                    <option value="459">IPhone X</option>
+                                    <option value="499">IPhone X MAX</option>
+                                    <option value="365">IPhone 8</option>
+                                    <option value="399">IPhone 8plus</option>
+                                    <option value="229">IPhone 7</option>
+                                    <option value="339">IPhone 7 plus</option>
+                                    <option value="199">IPhone 6s </option>
+                                    <option value="299">IPhone 6s plus</option>
+                                    <option value="179">IPhone 6 </option>
+                                    <option value="179">IPhone 6 plus</option>
+                                    <option value="159">IPhone 5</option>
+                                    <option value="159">IPhone 5s</option>
+                                </select>
+                                <input type="text" class="text" placeholder="手机联系人">
+                                <input type="text" class="text" placeholder="联系地址">
+                                <input type="text" class="text" placeholder="手机号码">
+
+
+                                <textarea class="textarea" placeholder="请认真填写备注 我们会根据您的备注来给你制定维修计划"></textarea>
+                               <h1 style="color:red ; font-size:20px">您应付款：￥<input style="color:red ; font-size:20px" id="tax1" type="text" value="0"></h1>
+                                <script>
+                                    function getCity(){
+                                        var i=document.getElementById("number").options[document.getElementById("number").selectedIndex].value;
+                                        console.log(i);
+                                        $("#tax1").val(i);
+                                    }
+                                </script>
+                                <%--<div class="codenr"><input type="text" class="text" placeholder="驗證碼" style=" width:160px;"> 1234</div>--%>
+                                <div class="clean"></div>
+                                <input value="立即提交" onclick="tuueueu()" class="sub">
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="blank25"></div>
@@ -172,6 +190,23 @@
     </div>
 
     <div class="page-down" title="back to the top"><i class="fa fa-angle-up"></i></div>
+
+    <script>
+        function tuueueu() {
+            var submitTtpe = true;
+            $(".applySpecialform input[type='text']").each(function(){
+                if($(this).val()==null||$(this).val()==""){
+                    submitTtpe = false;
+                }
+            });
+            if(submitTtpe){
+
+            }else {
+                alert("请填写详细信息");
+            }
+        }
+    </script>
+
     <script>
         //返回顶部
         $(window).scroll(function () {
@@ -211,3 +246,4 @@
 
 </body>
 </html>
+

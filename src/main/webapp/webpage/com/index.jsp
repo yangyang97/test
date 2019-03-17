@@ -84,9 +84,9 @@
     <div class="inpronr">
         <div class="content">
             <ul>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/one.jpg"></div><div class="fgc"><div class="tit">iPhone内存升级</div><div class="jj">告别内存不足  容量轻松升级 ￥159元起</div><div class="more">+</div></div></li></a>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/tow.jpg"></div><div class="fgc"><div class="tit">iPhone内存更换</div><div class="jj">提升续航 免费上门 保修360天 ￥129元起</div><div class="more">+</div></div></li></a>
-                <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/three.jpg"></div><div class="fgc"><div class="tit">iPhone屏幕更换</div><div class="jj">屏幕快速换新 极速响应 免费上门 ￥149元起</div><div class="more">+</div></div></li></a>
+                <a href="/PhoneController.do?Memory"><li><div class="pic"><img src="/plug-in/repair/images/one.jpg"></div><div class="fgc"><div class="tit">iPhone内存升级</div><div class="jj">告别内存不足  容量轻松升级 ￥159元起</div><div class="more">+</div></div></li></a>
+                <a href="/PhoneController.do?Battery"><li><div class="pic"><img src="/plug-in/repair/images/tow.jpg"></div><div class="fgc"><div class="tit">iPhone内存更换</div><div class="jj">提升续航 免费上门 保修360天 ￥129元起</div><div class="more">+</div></div></li></a>
+                <a href="/PhoneController.do?screen"><li><div class="pic"><img src="/plug-in/repair/images/three.jpg"></div><div class="fgc"><div class="tit">iPhone屏幕更换</div><div class="jj">屏幕快速换新 极速响应 免费上门 ￥149元起</div><div class="more">+</div></div></li></a>
                 <a href="#"><li><div class="pic"><img src="/plug-in/repair/images/four.jpg"></div><div class="fgc"><div class="tit">MacBook系列维修</div><div class="jj">数百种Macbook问题 ￥98元起</div><div class="more">+</div></div></li></a>
                 <div class="clean"></div>
             </ul>

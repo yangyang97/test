@@ -40,4 +40,53 @@ public class PhoneController {
         return new ModelAndView("com/pro");
     }
 
+    /**
+     * 跳转 详细修理页面
+     *
+     * @return
+     */
+    @RequestMapping(params = "Phonedetail")
+    public ModelAndView Phonedetail(HttpServletRequest request) {
+        //前段传回数据
+        String id=request.getParameter("id");
+        if(!StringUtil.isEmpty(id)){
+
+            String Sql="SELECT * from phone_type where id= '"+id+"'  ";
+            List<Map<String,Object>> phonelist = this.systemService.findForJdbc(Sql);
+            request.setAttribute("phonelist",phonelist);
+
+        }
+
+        return new ModelAndView("com/sumit");
+
+    }
+
+    /**
+     * 跳转 内存升级界面
+     *
+     * @return
+     */
+    @RequestMapping(params = "Memory")
+    public ModelAndView Memory(HttpServletRequest request) {
+        return new ModelAndView("com/Memory");
+    }
+
+    /**
+     * 跳转 电池更换
+     *
+     * @return
+     */
+    @RequestMapping(params = "Battery")
+    public ModelAndView Battery(HttpServletRequest request) {
+        return new ModelAndView("com/Battery");
+    }
+    /**
+     * 跳转 屏幕更换
+     *
+     * @return
+     */
+    @RequestMapping(params = "screen")
+    public ModelAndView screen(HttpServletRequest request) {
+        return new ModelAndView("com/screen");
+    }
 }

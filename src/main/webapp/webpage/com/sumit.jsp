@@ -75,7 +75,7 @@
                 <div class="nylmtit"><a class="lmnav on">维修提交</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
                 <div class="nycontact">
                     <div class="wz">
-                        <h1 style="font-size:25px">品牌机型：iphone8</h1><br/>
+                        <h1 style="font-size:25px">品牌机型：${phonelist.get(0).phone_name}</h1><br/>
                         <h2 style="font-size:15px">免费上门&nbsp&nbsp&nbsp20分钟快修&nbsp&nbsp&nbsp修完付款</h2><br/>
                         <h3 style="font-size:10px">用户在使用本服务的过程中，可能需要填写或提交一些必要的信息，如法律法规等规章规范性文件 （以下称“法律法规”）规定的需要填写的身份信息。
                         如用户提交的信息不完整或不符合法律法规的 规定，则用户可能无法使用本服务或在使用本服务的过程中受到限制。
@@ -83,7 +83,7 @@
                         非个人隐私信息是指用户对本服务的操作状态以及使用习惯等明确 且客观反映在闪修侠服务器端的基本记录信息、个人隐私信息范围外的其它普通信息，
                             以及用户 同意公开的上述隐私信息</h3><br/>
                     </div>
-                    <div class="pic"><img src="/plug-in/repair/images/iPhone8.jpg"></div>
+                    <div class="pic"><img src="${phonelist.get(0).phone_photo}"></div>
                     <div class="blank25"></div>
 
                     <div class="rightcon">
