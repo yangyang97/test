@@ -9,43 +9,7 @@
     <!-- css files -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- /css files -->
-    <script>
-        var href = document.referrer;//跳转前页面
-        function submit() {
-            var userName = $("#userName").val();
-            var password = $("#password").val();
-            if((userName == '' || userName == null || userName == undefined) ||
-                (password == '' || password == null || password == undefined)
-            ){
-                alert("输入框不为空");
-                return false;
-            }
-            $.ajax({
-                async: false,
-                type : "post",
-                url:"repairUserController.do?login",
-                data: {
-                    userName: userName,
-                    password: password
-                },
-                success: function (data) {
-                    var registerResult = data.resultSuccess;
-                    var registerMsg = data.resultMsg;
-                    console.log(data)
-                    console.log(registerResult)
-                    console.log(registerMsg)
-                    debugger
-                    if(registerResult){
-                        alert("登录成功");
-                        window.location = href;
-                    }else{
-                        alert(registerMsg);
-                        return false;
-                    }
-                }
-            })
-        }
-    </script>
+
 </head>
 
 <body background="/plug-in/login/images/comturn.png">
@@ -59,6 +23,38 @@
         <button class="register" value="登录" onclick="submit()">登录</button>
     </div>
 </div>
-
+<script>
+    var href = document.referrer;//跳转前页面
+    function submit() {
+        var userName = $("#userName").val();
+        var password = $("#password").val();
+        if((userName == '' || userName == null || userName == undefined) ||
+            (password == '' || password == null || password == undefined)
+        ){
+            alert("输入框不为空");
+            return false;
+        }
+        $.ajax({
+            async: false,
+            type : "post",
+            url:"repairUserController.do?login",
+            data: {
+                userName: userName,
+                password: password
+            },
+            success: function (data) {
+                var registerResult = data.resultSuccess;
+                var registerMsg = data.resultMsg;
+                if(registerResult){
+                    alert("登录成功");
+                    window.location = href;
+                }else{
+                    alert(registerMsg);
+                    return false;
+                }
+            }
+        })
+    }
+</script>
 </body>
 </html>

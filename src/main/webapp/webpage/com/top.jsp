@@ -24,7 +24,7 @@
         <c:if test="${!empty user}">
             <div class="lang">
                    <li></li> 欢迎您！${user.userName}
-                &nbsp;<a href="/repairUserController.do?logout">退出</a>
+                &nbsp;<a onclick="logout()">退出</a>
             </div>
         </c:if>
         <c:if test="${empty user}">
@@ -34,6 +34,20 @@
     </div>
 </head>
 <body>
+<script>
+    var href = document.referrer;//跳转前页面
+    function logout() {
+        $.ajax({
+            async: false,
+            type: "post",
+            url: "/repairUserController.do?logout",
+            success: function (data) {
+                    alert("退出成功");
+                    window.location = href;
+                }
 
+        });
+    }
+</script>
 </body>
 </html>

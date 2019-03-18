@@ -219,7 +219,15 @@ public class RepairUserController extends BaseController {
 	public AjaxJson logout(HttpServletRequest request){
 		HttpSession session = request.getSession();
 		AjaxJson j = new AjaxJson();
-		session.removeAttribute("user");
+		try{
+			j.setMsg("退出成功");
+			session.removeAttribute("user");
+		}catch (Exception e){
+			j.setMsg("退出失败");
+
+		}
+
+
 		return j;
 	}
 

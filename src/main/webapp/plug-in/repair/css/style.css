@@ -110,6 +110,7 @@ img {max-width: 100%;}
 .nycontact{ padding:50px; border: 1px solid #ebebeb;}
 .nycontact .wz{ font-size:14px; color:#666; line-height:30px; width:500px; float:left;}
 .nycontact .pic{ width:550px; float:right;}
+.nycontact .picc{ width:1100px;line-height: 900px;}
 .propj{ padding:40px 0; max-width:840px;}
 .propj .text{ width:48%; height:40px; line-height:40px; box-sizing:border-box; padding:0 10px; background:#f0f0f0; font-size:16px; margin-bottom:15px; float:left; margin-right:2%;}
 .propj .textarea{ width:98%; height:110px; line-height:30px; box-sizing:border-box; padding:10px; background:#f0f0f0; font-size:16px; border:0px;  margin-bottom:10px;}

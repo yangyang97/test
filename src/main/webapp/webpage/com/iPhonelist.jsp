@@ -59,9 +59,9 @@
         <div class="content">
             <div class="inleft">
                 <div class="title">手机快修专家</div>
-                <a href="/PhoneController.do?PhoneList&type=0"><div class="li on">全系列</div></a>
-                <a href="/PhoneController.do?PhoneList&type=1"><div class="li">iPhone专区</div></a>
-                <a href="/PhoneController.do?PhoneList&type=2"><div class="li">MacBook专区</div></a>
+                <a href="/PhoneController.do?PhoneList"><div class="li">全系列</div></a>
+                <a href="/PhoneController.do?IPhone"><div class="li on">iPhone专区</div></a>
+                <a href="/PhoneController.do?MacBook"><div class="li">MacBook专区</div></a>
                 <div class="blank25"></div>
                 <div class="title">联系我们</div>
                 <div class="li">电话 : XXXXXXXXXXXXXXXX</div>

@@ -40,7 +40,30 @@
             })})
     </script>
 </head>
-
+<style type="text/css">
+    table.imagetable {
+        font-family: verdana,arial,sans-serif;
+        font-size:12px;
+        color:#333333;
+        border-width: 1px;
+        border-color: #999999;
+        border-collapse: collapse;
+    }
+    table.imagetable th {
+        background:#b5cfd2;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #999999;
+    }
+    table.imagetable td {
+        background:#dcddc0 ;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #999999;
+    }
+</style>
 <body>
 <div class="smallest-screen"></div>
 <!--<div class="lmbutt"><i class="fa fa-reorder"></i></div>-->
@@ -72,35 +95,43 @@
         <div class="content">
 
             <div class="inright1">
-                <div class="nylmtit"><a class="lmnav on">聯絡我們</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
+                <div class="nylmtit"><a class="lmnav on">我的订单</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">我的订单</a></div><div class="clean"></div></div>
                 <div class="nycontact">
-                    <div class="wz">
-                        電話：+852-37053270<br/>
-                        傳真：+852-37053271<br/>
-                        電子郵箱：sales@cellplushk.com<br/>
-                        網址：www.cellplushk.com<br/>
-                        電子郵箱：sales@cellplushk.com<br/>
-                        電話：+852-37053270<br/>
-                        傳真：+852-37053271
+                    <div class="picc">
+                        <img src="/plug-in/repair/images/order.jpg">
                     </div>
-                    <div class="pic"><img src="/plug-in/repair/images/contact.jpg"></div>
+                    <%--<div class="pic"><img src="/plug-in/repair/images/order.jpg"></div>--%>
                     <div class="blank25"></div>
 
-                    <div class="rightcon">
-                        <div class="title">在线留言</div>
-                        <div class="propj" style="padding:0;">
-                            <form>
-                                <input type="text" class="text" placeholder="公司名稱">
-                                <input type="text" class="text" placeholder="聯絡人">
-                                <input type="text" class="text" placeholder="聯絡電話">
-                                <input type="text" class="text" placeholder="電郵">
-                                <textarea class="textarea" placeholder="查詢"></textarea>
-                                <div class="codenr"><input type="text" class="text" placeholder="驗證碼" style=" width:160px;"> 1234</div>
-                                <div class="clean"></div>
-                                <input type="submit" value="立即提交" class="sub">
-                            </form>
-                        </div>
-                    </div>
+                    <table class="imagetable">
+                        <tr>
+                            <th>Info Header 1</th>
+                            <th>Info Header 2</th>
+                            <th>Info Header 3</th>
+                            <th>Info Header 4</th>
+                            <th>Info Header 5</th>
+                            <th>Info Header 6</th>
+                            <th>Info Header 7</th>
+                        </tr>
+                        <tr>
+                            <td>Text 1A</td>
+                            <td>Text 1B</td>
+                            <td>Text 1C</td>
+                            <td>Text 1D</td>
+                            <td>Text 1e</td>
+                            <td>Text 1f</td>
+                            <td>Text 1g</td>
+                        </tr>
+                        <tr>
+                            <td>Text 2A</td>
+                            <td>Text 2B</td>
+                            <td>Text 2C</td>
+                            <td>Text 2C</td>
+                            <td>Text 2C</td>
+                            <td>Text 2C</td>
+                            <td>Text 2C</td>
+                        </tr>
+                    </table>
 
                 </div>
             </div>
