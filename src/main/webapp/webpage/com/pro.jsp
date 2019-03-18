@@ -49,21 +49,7 @@
 <div class="webmain">
 
     <div class="header">
-        <div class="content">
-            <div class="logo"></div>
-            <div class="muen">
-                <ul>
-                    <a href="/webpage/com/index.jsp"><li >主页</li></a>
-                    <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
-                    <a href="/webpage/com/pro.jsp"><li class="on">全球</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>产品</li></a>
-                    <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
-                </ul>
-            </div>
-            <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>
-            <div class="clean"></div>
-        </div>
+        <jsp:include   page="top.jsp" flush="true"/>
     </div>
 
     <div class="nybg">
@@ -85,7 +71,7 @@
             </div>
 
             <div class="inright">
-                <div class="nylmtit"><a class="lmnav on">专注才是专业</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
+                <div class="nylmtit"><a class="lmnav on">专注才是专业</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">产品</a></div><div class="clean"></div></div>
                 <div class="nypro">
                     <ul>
                             <c:forEach items="${phonelist}" var="obj">

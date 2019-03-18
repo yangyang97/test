@@ -23,7 +23,7 @@ public class sumbitController {
     @Autowired
     private SystemService systemService;
     /**
-     * 内存升级
+     * 订单页面
      *
      * @return
      */
@@ -33,6 +33,7 @@ public class sumbitController {
         String message = null;
         AjaxJson j = new AjaxJson();
         message = "已提交";
+        j.setMsg(message);
         //接收数据
         String data=request.getParameter("data");
         String submitTtpe=request.getParameter("submitTtpe");
@@ -73,8 +74,9 @@ public class sumbitController {
 
             e.printStackTrace();
             message = "提交失败";
+            j.setMsg(message);
             throw new BusinessException(e.getMessage());
         }
-        return null;
+        return j;
     }
 }

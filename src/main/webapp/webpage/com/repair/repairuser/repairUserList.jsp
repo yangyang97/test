@@ -3,7 +3,7 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 <div class="easyui-layout" fit="true">
   <div region="center" style="padding:0px;border:0px">
-  <t:datagrid name="phoneTypeList" checkbox="false" pagination="true" fitColumns="true" title="手机列表" actionUrl="phoneTypeController.do?datagrid" idField="id" sortName="createDate" fit="true" queryMode="group">
+  <t:datagrid name="repairUserList" checkbox="false" pagination="true" fitColumns="true" title="用户表" actionUrl="repairUserController.do?datagrid" idField="id" sortName="createDate" fit="true" queryMode="group">
    <t:dgCol title="主键"  field="id"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="创建人名称"  field="createName"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="创建人登录名称"  field="createBy"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
@@ -13,23 +13,19 @@
    <t:dgCol title="更新日期"  field="updateDate"  formatter="yyyy-MM-dd"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="所属部门"  field="sysOrgCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="所属公司"  field="sysCompanyCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <%--<t:dgCol title="流程状态"  field="bpmStatus"  queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>--%>
-   <t:dgCol title="手机照片"  field="phonePhoto" image="true" imageSize="50,50" formatterjs="btListImgFormatter"  queryMode="single"  width="50"></t:dgCol>
-
-   <t:dgCol title="手机名称"  field="phoneName"  query="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="手机颜色"  field="phoneColor"  queryMode="single"  width="120"></t:dgCol>
-   <%--<t:dgCol title="故障类型"  field="phoneFault"  query="true"  queryMode="single"  width="120"></t:dgCol>--%>
-   <%--<t:dgCol title="预留字段"  field="phoneMemo"  queryMode="single"  width="120"></t:dgCol>--%>
-   <%--<t:dgCol title="维修价格"  field="phoneMemory"  queryMode="single"  width="120"></t:dgCol>--%>
+   <t:dgCol title="流程状态"  field="bpmStatus"  queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>
+   <t:dgCol title="用户名"  field="userName"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="密码"  field="password"  queryMode="single"  width="120"></t:dgCol>
+   <t:dgCol title="手机号"  field="mobile"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
-   <t:dgDelOpt title="删除" url="phoneTypeController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>
-   <t:dgToolBar title="录入" icon="icon-add" url="phoneTypeController.do?goAdd" funname="add"  width="768"></t:dgToolBar>
-   <t:dgToolBar title="编辑" icon="icon-edit" url="phoneTypeController.do?goUpdate" funname="update"  width="768"></t:dgToolBar>
-   <%--<t:dgToolBar title="批量删除"  icon="icon-remove" url="phoneTypeController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>--%>
-   <%--<t:dgToolBar title="查看" icon="icon-search" url="phoneTypeController.do?goUpdate" funname="detail"  width="768"></t:dgToolBar>--%>
-   <%--<t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>--%>
-   <%--<t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>--%>
-   <%--<t:dgToolBar title="模板下载" icon="icon-putout" funname="ExportXlsByT"></t:dgToolBar>--%>
+   <t:dgDelOpt title="删除" url="repairUserController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>
+   <t:dgToolBar title="录入" icon="icon-add" url="repairUserController.do?goAdd" funname="add"  width="768"></t:dgToolBar>
+   <t:dgToolBar title="编辑" icon="icon-edit" url="repairUserController.do?goUpdate" funname="update"  width="768"></t:dgToolBar>
+   <t:dgToolBar title="批量删除"  icon="icon-remove" url="repairUserController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>
+   <t:dgToolBar title="查看" icon="icon-search" url="repairUserController.do?goUpdate" funname="detail"  width="768"></t:dgToolBar>
+   <t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>
+   <t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>
+   <t:dgToolBar title="模板下载" icon="icon-putout" funname="ExportXlsByT"></t:dgToolBar>
   </t:datagrid>
   </div>
  </div>
@@ -41,17 +37,17 @@
  
 //导入
 function ImportXls() {
-	openuploadwin('Excel导入', 'phoneTypeController.do?upload', "phoneTypeList");
+	openuploadwin('Excel导入', 'repairUserController.do?upload', "repairUserList");
 }
 
 //导出
 function ExportXls() {
-	JeecgExcelExport("phoneTypeController.do?exportXls","phoneTypeList");
+	JeecgExcelExport("repairUserController.do?exportXls","repairUserList");
 }
 
 //模板下载
 function ExportXlsByT() {
-	JeecgExcelExport("phoneTypeController.do?exportXlsByT","phoneTypeList");
+	JeecgExcelExport("repairUserController.do?exportXlsByT","repairUserList");
 }
 
 //bootstrap列表图片格式化

@@ -48,21 +48,7 @@
 <div class="webmain">
 
     <div class="header">
-        <div class="content">
-            <div class="logo"></div>
-            <div class="muen">
-                <ul>
-                    <a href="/pcController.do?index"><li class="on">主页</li></a>
-                    <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
-                    <a href="/PhoneController.do?PhoneList"><li>全球</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>产品</li></a>
-                    <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
-                    <a href="/webpage/com/contact.jsp"><li>联络我们</li></a>
-                </ul>
-            </div>
-            <%--<div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>--%>
-            <div class="clean"></div>
-        </div>
+        <jsp:include   page="top.jsp" flush="true"/>
     </div>
 
     <div class="bannerbg">
