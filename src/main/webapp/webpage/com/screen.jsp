@@ -53,7 +53,7 @@
 
     <div class="nybg">
 
-        <div class="nybanner" style="background:url(/plug-in/repair/images/nybanner.jpg) no-repeat center;"></div>
+        <div class="nybanner" style="background:url(/plug-in/repair/images/zuidi.jpg) no-repeat center;"></div>
         <div class="blank25"></div>
         <div class="content">
 
@@ -121,55 +121,7 @@
 
     </div><!-- nybg end -->
 
-    <div class="footer">
-        <div class="content">
-            <div class="fnav">
-                <div class="tit">關於我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">全球性</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">產品</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">選擇我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">聯繫我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-
-            <div class="fr">
-                <div class="search">
-                    <form>
-                        <input type="text" class="text" placeholder="請輸入關鍵詞">
-                        <input type="submit" class="sub" value=" " >
-                    </form>
-                </div>
-                <div class="blank20"></div>
-                <div class="ewm">
-                    <div class="li"><img src="/plug-in/repair/images/index_03.jpg"></div>
-                    <div class="li"><img src="/plug-in/repair/images/index_03.jpg"></div>
-                </div>
-            </div>
-            <div class="clean"></div>
-        </div>
-    </div>
+    <jsp:include page="Down.jsp"></jsp:include>
     <div class="banq">
         <div class="content">
             Copyright © 2019 - 2029 闪电侠科技有限公司 All Rights Reserved.

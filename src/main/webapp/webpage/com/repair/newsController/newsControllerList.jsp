@@ -15,9 +15,9 @@
    <t:dgCol title="所属公司"  field="sysCompanyCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="流程状态"  field="bpmStatus" hidden="true" queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>
    <t:dgCol title="新闻标题"  field="newsTitle"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="新闻内容"  field="newsDes"  queryMode="single"  width="120"></t:dgCol>
+   <%--<t:dgCol title="新闻内容"  field="newsDes"  queryMode="single"  width="120"></t:dgCol>--%>
    <t:dgCol title="新闻时间"  field="newsTime" formatter="yyyy-MM-dd" queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="新闻排序"  field="newsSour"  queryMode="single"  width="120"></t:dgCol>
+   <%--<t:dgCol title="新闻排序"  field="newsSour"  queryMode="single"  width="120"></t:dgCol>--%>
    <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
    <t:dgDelOpt title="删除" url="newsControllerController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>
    <t:dgToolBar title="录入" icon="icon-add" url="newsControllerController.do?goAdd" funname="add"  width="768"></t:dgToolBar>

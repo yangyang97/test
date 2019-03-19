@@ -71,21 +71,7 @@
 <div class="webmain">
 
     <div class="header">
-        <div class="content">
-            <div class="logo"></div>
-            <div class="muen">
-                <ul>
-                    <a href="/webpage/com/index.jsp"><li>主页</li></a>
-                    <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>全球</li></a>
-                    <a href="/webpage/com/pro.jsp"><li>产品</li></a>
-                    <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
-                    <a href="/webpage/com/contact.jsp"><li  class="on">联络我们</li></a>
-                </ul>
-            </div>
-            <div class="lang"><a href="#" class="cn">中文</a><a href="#" class="en">EN</a><div class="clean"></div></div>
-            <div class="clean"></div>
-        </div>
+        <jsp:include   page="top.jsp" flush="true"/>
     </div>
 
     <div class="nybg">
@@ -98,11 +84,11 @@
                 <div class="nylmtit"><a class="lmnav on">我的订单</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">我的订单</a></div><div class="clean"></div></div>
                 <div class="nycontact">
                     <div class="picc">
-                        <img src="/plug-in/repair/images/order.jpg">
+                        <img src="/plug-in/repair/images/order1.jpg">
                     </div>
                     <%--<div class="pic"><img src="/plug-in/repair/images/order.jpg"></div>--%>
-                    <div class="blank25"></div>
-
+                    <div class="blank25"> </div>
+                    <h1 style="font-size: 15px">我的订单</h1>
                     <table class="imagetable">
                         <tr>
                             <th>Info Header 1</th>
@@ -141,58 +127,10 @@
 
     </div><!-- nybg end -->
 
-    <div class="footer">
-        <div class="content">
-            <div class="fnav">
-                <div class="tit">關於我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">全球性</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">產品</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">選擇我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-            <div class="fnav">
-                <div class="tit">聯繫我們</div>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-                <a href="#">公司簡介</a>
-            </div>
-
-            <div class="fr">
-                <div class="search">
-                    <form>
-                        <input type="text" class="text" placeholder="請輸入關鍵詞">
-                        <input type="submit" class="sub" value=" " >
-                    </form>
-                </div>
-                <div class="blank20"></div>
-                <div class="ewm">
-                    <div class="li"><img src="/plug-in/repair/images/index_03.jpg"></div>
-                    <div class="li"><img src="/plug-in/repair/images/index_03.jpg"></div>
-                </div>
-            </div>
-            <div class="clean"></div>
-        </div>
-    </div>
+    <jsp:include page="Down.jsp"></jsp:include>
     <div class="banq">
         <div class="content">
-            Copyright © 2005 - 2015 東益科技有限公司 All Rights Reserved.
+            Copyright © 2005 - 2015 极速修科技有限公司 All Rights Reserved.
         </div>
     </div>
 

@@ -8,7 +8,9 @@
 <title>新闻动态</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<t:base type="bootstrap,layer,validform,bootstrap-form,DatePicker,jquery,easyui,tools"></t:base>
+	<script type="text/javascript"  charset="utf-8" src="/plug-in/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript"  charset="utf-8" src="/plug-in/ueditor/ueditor.all.min.js"></script>
+<t:base type="ueditor,bootstrap,layer,validform,bootstrap-form,DatePicker,jquery,easyui,tools"></t:base>
 </head>
  <body style="overflow:hidden;overflow-y:auto;">
  <script src="/plug-in/layui/layui.js"></script>
@@ -27,14 +29,6 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="newsDes" class="col-sm-3 control-label">新闻内容：</label>
-			<div class="col-sm-7">
-				<div class="input-group" style="width:100%">
-					<input id="newsDes" name="newsDes" type="text" maxlength="5000" class="form-control input-sm" placeholder="请输入新闻内容"  ignore="ignore" />
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
 			<label for="newsTime" class="col-sm-3 control-label">新闻时间：</label>
 			<div class="col-sm-7">
 				<div class="input-group" style="width:100%">
@@ -46,13 +40,30 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label for="newsSour" class="col-sm-3 control-label">新闻排序：</label>
+			<label for="newsSour" class="col-sm-3 control-label">新闻类型：</label>
 			<div class="col-sm-7">
 				<div class="input-group" style="width:100%">
 					<input id="newsSour" name="newsSour" type="text" maxlength="32" class="form-control input-sm" placeholder="请输入新闻排序"  datatype="n"  ignore="ignore" />
 				</div>
 			</div>
 		</div>
+		<div class="form-group">
+			<label for="newsDes" class="col-sm-3 control-label">新闻内容：</label>
+			<div class="col-sm-7">
+				<div class="input-group" style="width:100%">
+					<td class="value">
+						<textarea name="newsDes" datatype="*" id="newsDes" style="width: 800px;height:600px"></textarea>
+						<script type="text/javascript">
+                            var editor = UE.getEditor('newsDes');
+						</script>
+						<span class="Validform_checktip"></span>
+						<label class="Validform_label" style="display: none;">内容</label>
+					</td>
+				</div>
+			</div>
+		</div>
+
+
 	</form>
 	</div>
  </div>

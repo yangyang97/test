@@ -143,53 +143,53 @@
 				</property>
 			</bean>
 		</mvc:interceptor>
-		<!-- 登录权限拦截器 -->
-		<mvc:interceptor>
-			<mvc:mapping path="/**" />
-			<bean class="org.jeecgframework.core.interceptors.AuthInterceptor">
-				<property name="excludeUrls">
-					<list>
-						<value>loginController.do?goPwdInit</value>
-						<value>loginController.do?pwdInit</value>
-						<value>loginController.do?login</value>
-						<value>loginController.do?logout</value>
-						<value>loginController.do?changeDefaultOrg</value>
-                        <value>loginController.do?login2</value>
-						<value>loginController.do?login3</value>
-						<value>loginController.do?checkuser</value>
-						<value>loginController.do?checkuser=</value>
-						<value>systemController.do?saveFiles</value>
-						<!-- 邮件密码重置 -->
-						<value>loginController.do?goResetPwd</value>
-						<value>loginController.do?resetPwd</value>
-						<value>loginController.do?goResetPwdMail</value>
-						<value>loginController.do?sendResetPwdMail</value>
-						<value>userController.do?userOrgSelect</value>
-						<!--移动图表-->
-						<value>cgDynamGraphController.do?design</value>
-						<value>cgDynamGraphController.do?datagrid</value>
+		<!--&lt;!&ndash; 登录权限拦截器 &ndash;&gt;-->
+		<!--<mvc:interceptor>-->
+			<!--<mvc:mapping path="/**" />-->
+			<!--<bean class="org.jeecgframework.core.interceptors.AuthInterceptor">-->
+				<!--<property name="excludeUrls">-->
+					<!--<list>-->
+						<!--<value>loginController.do?goPwdInit</value>-->
+						<!--<value>loginController.do?pwdInit</value>-->
+						<!--<value>loginController.do?login</value>-->
+						<!--<value>loginController.do?logout</value>-->
+						<!--<value>loginController.do?changeDefaultOrg</value>-->
+                        <!--<value>loginController.do?login2</value>-->
+						<!--<value>loginController.do?login3</value>-->
+						<!--<value>loginController.do?checkuser</value>-->
+						<!--<value>loginController.do?checkuser=</value>-->
+						<!--<value>systemController.do?saveFiles</value>-->
+						<!--&lt;!&ndash; 邮件密码重置 &ndash;&gt;-->
+						<!--<value>loginController.do?goResetPwd</value>-->
+						<!--<value>loginController.do?resetPwd</value>-->
+						<!--<value>loginController.do?goResetPwdMail</value>-->
+						<!--<value>loginController.do?sendResetPwdMail</value>-->
+						<!--<value>userController.do?userOrgSelect</value>-->
+						<!--&lt;!&ndash;移动图表&ndash;&gt;-->
+						<!--<value>cgDynamGraphController.do?design</value>-->
+						<!--<value>cgDynamGraphController.do?datagrid</value>-->
 
-						<!-- 菜单样式图标预览 -->
-						<value>webpage/common/functionIconStyleList.jsp</value>
-						<value>chat/imController/showOrDownByurl.do</value>
-						<!-- 接收远程定时任务开关指令 -->
-						<value>timeTaskController.do?remoteTask</value>
-						<!-- swagger支持  -->
-						<value>rest/v2/api-docs</value>
-						<value>pcController.do?index</value>
-					</list>
-				</property>
-				<!-- 模糊匹配 -->
-				<property name="excludeContainUrls">
-					<list>
-						<!--单点登录-->
-						<value>toLogin.do</value>
-						<!--restful请求统一不做拦截，采用jwt接口机制验证-->
-						<value>rest/</value>
-					</list>
-				</property>
-			</bean>
-		</mvc:interceptor>
+						<!--&lt;!&ndash; 菜单样式图标预览 &ndash;&gt;-->
+						<!--<value>webpage/common/functionIconStyleList.jsp</value>-->
+						<!--<value>chat/imController/showOrDownByurl.do</value>-->
+						<!--&lt;!&ndash; 接收远程定时任务开关指令 &ndash;&gt;-->
+						<!--<value>timeTaskController.do?remoteTask</value>-->
+						<!--&lt;!&ndash; swagger支持  &ndash;&gt;-->
+						<!--<value>rest/v2/api-docs</value>-->
+						<!--<value>pcController.do?index</value>-->
+					<!--</list>-->
+				<!--</property>-->
+				<!--&lt;!&ndash; 模糊匹配 &ndash;&gt;-->
+				<!--<property name="excludeContainUrls">-->
+					<!--<list>-->
+						<!--&lt;!&ndash;单点登录&ndash;&gt;-->
+						<!--<value>toLogin.do</value>-->
+						<!--&lt;!&ndash;restful请求统一不做拦截，采用jwt接口机制验证&ndash;&gt;-->
+						<!--<value>rest/</value>-->
+					<!--</list>-->
+				<!--</property>-->
+			<!--</bean>-->
+		<!--</mvc:interceptor>-->
 		<!-- SQL注入拦截器 （暂时注释掉提高平台性能，需要此功能，可以放开注释）
         <mvc:interceptor>
             <mvc:mapping path="/**" />

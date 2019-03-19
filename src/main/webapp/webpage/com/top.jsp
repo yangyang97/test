@@ -14,7 +14,7 @@
         <div class="muen">
             <ul>
                 <a href="/pcController.do?index"><li class="on">主页</li></a>
-                <a href="/webpage/com/about.jsp"><li>关于我们</li></a>
+                <a href="/pcController.do?about"><li>关于我们</li></a>
                 <a href="/PhoneController.do?PhoneList"><li>产品</li></a>
                 <%--<a href="/webpage/com/pro.jsp"><li>产品</li></a>--%>
                 <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
