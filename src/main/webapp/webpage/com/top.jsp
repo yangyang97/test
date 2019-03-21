@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
+<script src="plug-in/layer/layer.js"></script>
 <head>
     <div class="content">
         <div class="logo"></div>
@@ -17,13 +18,14 @@
                 <a href="/pcController.do?about"><li>关于我们</li></a>
                 <a href="/PhoneController.do?PhoneList"><li>产品</li></a>
                 <%--<a href="/webpage/com/pro.jsp"><li>产品</li></a>--%>
-                <a href="/webpage/com/showpro.jsp"><li>选择我们</li></a>
+                <a href="/pcController.do?server"><li>服务条款</li></a>
                 <a href="/webpage/com/contact.jsp"><li>我的订单</li></a>
             </ul>
+
         </div>
         <c:if test="${!empty user}">
             <div class="lang">
-                   <li></li> 欢迎您！${user.userName}
+                <li></li> 欢迎您！${user.userName}
                 &nbsp;<a onclick="logout()">退出</a>
             </div>
         </c:if>

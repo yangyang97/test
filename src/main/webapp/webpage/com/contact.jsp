@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -81,43 +82,53 @@
         <div class="content">
 
             <div class="inright1">
-                <div class="nylmtit"><a class="lmnav on">我的订单</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">我的订单</a></div><div class="clean"></div></div>
+                <div class="nylmtit"><a class="lmnav on">我的订单</a>
+                    <div class="lj">您的位置：<a href="#">主页</a> > <a href="#">我的订单</a></div>
+                    <div class="clean"></div></div>
                 <div class="nycontact">
                     <div class="picc">
                         <img src="/plug-in/repair/images/order1.jpg">
                     </div>
                     <%--<div class="pic"><img src="/plug-in/repair/images/order.jpg"></div>--%>
-                    <div class="blank25"> </div>
-                    <h1 style="font-size: 15px">我的订单</h1>
-                    <table class="imagetable">
-                        <tr>
-                            <th>Info Header 1</th>
-                            <th>Info Header 2</th>
-                            <th>Info Header 3</th>
-                            <th>Info Header 4</th>
-                            <th>Info Header 5</th>
-                            <th>Info Header 6</th>
-                            <th>Info Header 7</th>
-                        </tr>
-                        <tr>
-                            <td>Text 1A</td>
-                            <td>Text 1B</td>
-                            <td>Text 1C</td>
-                            <td>Text 1D</td>
-                            <td>Text 1e</td>
-                            <td>Text 1f</td>
-                            <td>Text 1g</td>
-                        </tr>
-                        <tr>
-                            <td>Text 2A</td>
-                            <td>Text 2B</td>
-                            <td>Text 2C</td>
-                            <td>Text 2C</td>
-                            <td>Text 2C</td>
-                            <td>Text 2C</td>
-                            <td>Text 2C</td>
-                        </tr>
-                    </table>
+                    <div class="blank25">
+                        <c:if test="${empty user}">
+                            <a href="/repairUserController.do?loginPage">您还未登录请先登录</a>
+                        </c:if>
+                    </div>
+
+                    <c:if test="${not empty user}">
+                        <h1 style="font-size: 15px">我的订单</h1>
+                        <table class="imagetable">
+                            <tr>
+                                <th>Info Header 1</th>
+                                <th>Info Header 2</th>
+                                <th>Info Header 3</th>
+                                <th>Info Header 4</th>
+                                <th>Info Header 5</th>
+                                <th>Info Header 6</th>
+                                <th>Info Header 7</th>
+                            </tr>
+                            <tr>
+                                <td>Text 1A</td>
+                                <td>Text 1B</td>
+                                <td>Text 1C</td>
+                                <td>Text 1D</td>
+                                <td>Text 1e</td>
+                                <td>Text 1f</td>
+                                <td>Text 1g</td>
+                            </tr>
+                            <tr>
+                                <td>Text 2A</td>
+                                <td>Text 2B</td>
+                                <td>Text 2C</td>
+                                <td>Text 2C</td>
+                                <td>Text 2C</td>
+                                <td>Text 2C</td>
+                                <td>Text 2C</td>
+                            </tr>
+                        </table>
+                    </c:if>
+
 
                 </div>
             </div>

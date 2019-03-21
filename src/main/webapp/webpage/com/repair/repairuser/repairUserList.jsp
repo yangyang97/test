@@ -13,9 +13,9 @@
    <t:dgCol title="更新日期"  field="updateDate"  formatter="yyyy-MM-dd"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="所属部门"  field="sysOrgCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="所属公司"  field="sysCompanyCode"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="流程状态"  field="bpmStatus"  queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>
+   <%--<t:dgCol title="流程状态"  field="bpmStatus"  queryMode="single"  dictionary="bpm_status"  width="120"></t:dgCol>--%>
    <t:dgCol title="用户名"  field="userName"  queryMode="single"  width="120"></t:dgCol>
-   <t:dgCol title="密码"  field="password"  queryMode="single"  width="120"></t:dgCol>
+   <%--<t:dgCol title="密码"  field="password"  queryMode="single"  width="120"></t:dgCol>--%>
    <t:dgCol title="手机号"  field="mobile"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="操作" field="opt" width="100"></t:dgCol>
    <t:dgDelOpt title="删除" url="repairUserController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>

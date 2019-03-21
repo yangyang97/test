@@ -77,6 +77,9 @@ public class PhoneOrderEntity implements java.io.Serializable {
 	/**预留*/
 	@Excel(name="预留",width=15)
 	private java.lang.String orderMemo;
+	/**预留*/
+	@Excel(name="用户ID",width=15)
+	private java.lang.String orderID;
 	
 	/**
 	 *方法: 取得java.lang.String
@@ -403,5 +406,22 @@ public class PhoneOrderEntity implements java.io.Serializable {
 	 */
 	public void setOrderMemo(java.lang.String orderMemo){
 		this.orderMemo = orderMemo;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  预留
+	 */
+
+	@Column(name ="ORDER_ID",nullable=true,length=32)
+	public java.lang.String getOrderID(){
+		return this.orderID;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  预留
+	 */
+	public void setOrderID(java.lang.String orderID){
+		this.orderID = orderID;
 	}
 }

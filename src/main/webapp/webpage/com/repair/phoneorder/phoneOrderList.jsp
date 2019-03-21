@@ -7,7 +7,7 @@
    <t:dgCol title="主键"  field="id"  hidden="true"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="订单手机名称"  field="orderName"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="订单日期"  field="orderTime"  formatter="yyyy-MM-dd hh:mm" queryMode="single"  width="120"></t:dgCol>
-   <%--<t:dgCol title="订单颜色"  field="orderColor"  queryMode="single"  width="120"></t:dgCol>--%>
+   <t:dgCol title="订单颜色"  field="orderColor"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="订单地址"  field="orderWay"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="故障类型"  field="orderType"  queryMode="single"  width="120"></t:dgCol>
    <t:dgCol title="预留信息"  field="orderNamem"  queryMode="single"  width="120"></t:dgCol>
@@ -19,7 +19,7 @@
    <t:dgDelOpt title="删除" url="phoneOrderController.do?doDel&id={id}" urlclass="ace_button"  urlfont="fa-trash-o"/>
    <%--<t:dgToolBar title="录入" icon="icon-add" url="phoneOrderController.do?goAdd" funname="add"  width="768"></t:dgToolBar>--%>
    <%--<t:dgToolBar title="编辑" icon="icon-edit" url="phoneOrderController.do?goUpdate" funname="update"  width="768"></t:dgToolBar>--%>
-   <%--<t:dgToolBar title="批量删除"  icon="icon-remove" url="phoneOrderController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>--%>
+   <t:dgToolBar title="批量删除"  icon="icon-remove" url="phoneOrderController.do?doBatchDel" funname="deleteALLSelect"></t:dgToolBar>
    <t:dgToolBar title="查看" icon="icon-search" url="phoneOrderController.do?goUpdate" funname="detail"  width="768"></t:dgToolBar>
    <%--<t:dgToolBar title="导入" icon="icon-put" funname="ImportXls"></t:dgToolBar>--%>
    <%--<t:dgToolBar title="导出" icon="icon-putout" funname="ExportXls"></t:dgToolBar>--%>

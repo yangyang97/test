@@ -76,23 +76,23 @@
                     <div class="rightcon">
                         <div class="title">故障类型</div>
                         <div class="propj" style="padding:0;">
-                            <form name="form1">
-                                <input type="text" class="text" placeholder="机型颜色">
-                                <input type="text" class="text" placeholder="手机联系人">
-                                <input type="text" class="text" placeholder="联系地址">
-                                <input type="text" class="text" placeholder="手机号码">
-                                <select class="text" name="province" onclick="getCity()">
+                            <form name="form1" class="applySpecialform">
+                                <input type="text" name="color" class="text" placeholder="机型颜色">
+                                <input type="text" name="people" class="text" placeholder="手机联系人">
+                                <input type="text" name="addr" class="text" placeholder="联系地址">
+                                <input type="text" name="num" class="text" placeholder="手机号码">
+                                <select class="text" id="number" name="province" onclick="getCity()">
                                     <option value="0">请选择故障类型</option>
                                     <option value="1">屏幕问题(更换总成 旧屏回收)</option>
                                     <option value="2">电池/充电问题</option>
-                                    <option value="3">摄像头问题</option>
-                                    <option value="4">按键问题</option>
-                                    <option value="5">声音问题</option>
-                                    <option value="6">进水/无法开机/手机摔坏问题</option>
-                                    <option value="7">其他问题</option>
+                                    <option value="2">摄像头问题</option>
+                                    <option value="3">按键问题</option>
+                                    <option value="4">声音问题</option>
+                                    <option value="5">进水/无法开机/手机摔坏问题</option>
+                                    <option value="6">其他问题</option>
                                 </select>
-                                <SELECT class="text" name="city" >
-                                    <OPTION VALUE="0">请选择故障类型 </OPTION>
+                                <SELECT class="text" id="numbers" name="city" >
+                                    <OPTION VALUE="0" >请选择故障类型 </OPTION>
                                 </SELECT>
                                 <script>
                                     //定义了故障的二维数组，
@@ -105,10 +105,10 @@
                                         ["主板问题","手机严重损坏","进水"],
                                         ["重装调试","软件故障","刷机错误","感应区"],
                                     ];
-
                                     function getCity(){
                                         //获得省份下拉框的对象
                                         var sltProvince=document.form1.province;
+
                                         //获得城市下拉框的对象
                                         var sltCity=document.form1.city;
 
@@ -129,8 +129,8 @@
                                 <textarea class="textarea" placeholder="请认真填写备注 我们会根据您的备注来给你制定维修计划"></textarea>
                                 <%--<div class="codenr"><input type="text" class="text" placeholder="驗證碼" style=" width:160px;"> 1234</div>--%>
                                 <div class="clean"></div>
-                                <input type="submit" value="立即提交" class="sub">
                             </form>
+                            <input value="立即提交" onclick="detail()" class="sub">
                         </div>
                     </div>
 
@@ -150,7 +150,73 @@
     </div>
 
     <div class="page-down" title="back to the top"><i class="fa fa-angle-up"></i></div>
+<script>
+    function detail() {
+        var uesr='${user}';
+        if(uesr.length>0){
+            var id='${user.id}';
+            var submitTtpe = true;
+            var s = $("#number option:selected").val();
+            var c = $("#numbers option:selected").val();
+            $(".applySpecialform input[type='text']").each(function(){
+                if($(this).val()==null||$(this).val()==""){
+                    submitTtpe = false;
+                }
+            });
+            if(s !=0 &&c!=0){
+                if(submitTtpe){
+                    $(".applySpecialform").each(function(){
+                        var data=$(".applySpecialform").serialize();
+                        var baseWare = dataMethod(data);
+                        $.ajax({
+                            async: false,
+                            type: "POST",
+                            url:'sumbitController.do?PhoneType',
+                            data:{data:baseWare,id:id},
+                            success: function (result) {
+                                alert("提交成功，工程师会在最近的时间联系您");
+                                location.reload(true);
 
+
+                            },
+                            error: function (result) {
+                                alert("提交成功哦");
+                                location.reload(true);
+                            }
+                        })
+                    });
+                }else {
+                    layer.msg("请填写详细信息");
+                }
+            }else {
+                layer.msg("请选择故障类型");
+            }
+        }else{
+            layer.msg("请先登录");
+            setTimeout('window.location.href="/repairUserController.do?loginPage"',2000);
+        }
+
+    }
+
+
+
+    //form转为json
+    function dataMethod(data) {
+
+        var data= decodeURIComponent(data,true);//防止中文乱码
+        var dataJson=DataDeal.formToJson(data);//转化为json
+        return dataJson;
+    }
+    var DataDeal = {
+        //将从form中通过$('#form').serialize()获取的值转成json
+        formToJson: function (data) {
+            data=data.replace(/&/g,"\",\"");
+            data=data.replace(/=/g,"\":\"");
+            data="{\""+data+"\"}";
+            return data;
+        },
+    };
+</script>
     <script>
         //返回顶部
         $(window).scroll(function () {

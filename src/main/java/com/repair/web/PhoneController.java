@@ -110,6 +110,7 @@ public class PhoneController {
      */
     @RequestMapping(params = "Memory")
     public ModelAndView Memory(HttpServletRequest request) {
+
         return new ModelAndView("com/Memory");
     }
 
@@ -120,6 +121,7 @@ public class PhoneController {
      */
     @RequestMapping(params = "Battery")
     public ModelAndView Battery(HttpServletRequest request) {
+
         return new ModelAndView("com/Battery");
     }
     /**

@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: 123
   Date: 2019/2/15
-  Time: 16:30
+  Time: 16:32
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -53,15 +53,15 @@
 
     <div class="nybg">
 
-        <div class="nybanner" style="background:url(/plug-in/repair/images/nybanner.jpg) no-repeat center;"></div>
+        <div class="nybanner" style="background:url(/plug-in/repair/images/server.jpg) no-repeat center;"></div>
         <div class="blank25"></div>
         <div class="content">
             <div class="inleft">
-                <div class="title">關於我們</div>
-                <a href="#"><div class="li on">Cellplus 團隊</div></a>
-                <a href="#"><div class="li">Mobile power</div></a>
-                <a href="#"><div class="li">Mobile power</div></a>
-                <a href="#"><div class="li">Mobile power</div></a>
+                <div class="title">关于我们</div>
+                <div class="li">免费上门</div>
+                <div class="li">品质配件</div>
+                <div class="li">出乎你的意料</div>
+                <div class="li">多种维修方式</div>
                 <div class="blank25"></div>
                 <div class="title">聯絡我們</div>
                 <div class="li">電話 : +852-37053270</div>
@@ -71,20 +71,11 @@
             </div>
 
             <div class="inright">
-                <div class="nylmtit"><a class="lmnav on">Galaxy J3 Pro</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
-                <div class="showpro">
-                    <div class="pic"><img src="/plug-in/repair/images/pro.jpg" width="226" height="298"></div>
-                    <div class="nr">
-                        <div class="tit">名字</div>
-                        容量: 16GB<br/>
-                        顏色: 黑色/ 白色 / 金色<br/>
-                        价格：XXXX<br/>
-                        备注：XXXXXX<br/>
-
-                    </div>
-                    <div class="clean"></div>
+                <div class="nylmtit"><a class="lmnav on">${AboutList.get(0).news_title}</a><div class="lj">您的位置：<a href="#">主页</a> > <a href="#">关于我们</a></div><div class="clean"></div></div>
+                <div class="nyabout">
+                    ${AboutList.get(0).news_des}
                 </div>
-                <a href="#" class="fanh">返回列表</a>
+
             </div>
             <div class="blank25"></div>
             <div class="clean"></div>

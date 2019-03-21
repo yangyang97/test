@@ -91,6 +91,7 @@
                                     <option class="checkbox-type" tip="IPhone 5" value="159">IPhone 5</option>
                                     <option class="checkbox-type" tip="IPhone 5s" value="159">IPhone 5s</option>
                                 </select>
+                                <input name="color" type="text" class="text" placeholder="颜色">
                                 <input  NAME="pohoe" type="text" class="text" placeholder="手机联系人" >
                                 <input name="adl" type="text" class="text" placeholder="联系地址">
                                 <input name="num" type="text" class="text" placeholder="手机号码">
@@ -132,48 +133,53 @@
 
     <script>
         function tuueueu(e) {
-            var submitTtpe = true;
-            $(".applySpecialform input[type='text']").each(function(){
-                if($(this).val()==null||$(this).val()==""){
-                    submitTtpe = false;
-                }
-            });
-            if(submitTtpe){
-
-                var s = "";
-                $(".checkbox-type").each(function () {
-                    var r = $(this).is(':checked');
-                    console.log(r);
-                    if(r){
-                        s += $(this).val()+",";
+            var user='${user}';
+            if(user.length>0){
+                var id='${user.id}';
+                var submitTtpe = true;
+                var s = $("#number option:selected").attr('value');
+                $(".applySpecialform input[type='text']").each(function(){
+                    if($(this).val()==null||$(this).val()==""){
+                        submitTtpe = false;
                     }
                 });
-                var i=$("#number option:selected").attr('tip');
-                $("#c009").val(s);
-                $(".applySpecialform").each(function(){
-                    var data=$(".applySpecialform").serialize();
-                    var baseWare = dataMethod(data);
-                    $.ajax({
-                        async: false,
-                        type: "POST",
-                        url:'sumbitController.do?PhoneList',
-                        data:{data:baseWare,submitTtpe:i,type:e},
-                        success: function (result) {
-                            alert("提交成功");
-                            location.reload(true);
+                if(s !=0){
+                    if(submitTtpe){
+                        var i=$("#number option:selected").attr('tip');
+                        $(".applySpecialform").each(function(){
+                            var data=$(".applySpecialform").serialize();
+                            var baseWare = dataMethod(data);
+                            $.ajax({
+                                async: false,
+                                type: "POST",
+                                url:'sumbitController.do?PhoneList',
+                                data:{data:baseWare,submitTtpe:i,type:e,id:id},
+                                success: function (result) {
+                                    alert("提交成功，工程师会在最近的时间联系您");
+                                    location.reload(true);
 
 
-                        },
-                        error: function (result) {
-                            alert("提交失败");
-                            location.reload(true);
-                        }
-                    })
-                });
+                                },
+                                error: function (result) {
+                                    alert("提交成功哦");
+                                    location.reload(true);
+                                }
+                            })
+                        });
+                    }else {
+                        layer.msg("请填写详细信息");
+                    }
+                }else {
+                    layer.msg("请选择机型");
+                }
             }else {
-                alert("请填写详细信息");
+                layer.msg("请先登录");
+                setTimeout('window.location.href="/repairUserController.do?loginPage"',2000);
             }
+
         }
+
+
 
 
 

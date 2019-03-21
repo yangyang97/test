@@ -32,10 +32,22 @@ public class indexController extends BaseController {
     @RequestMapping(params = "about")
     public ModelAndView about(HttpServletRequest request) {
 
-        String sql=" SELECT * FROM news ORDER BY create_date DESC LIMIT 1 ";
+        String sql=" SELECT * FROM news WHERE news_sour ='1' ORDER BY news_time DESC LIMIT 1 ";
         List<Map<String,Object>> AboutList=this.systemService.findForJdbc(sql);
         request.setAttribute("AboutList",AboutList);
 
         return new ModelAndView("com/about");
+    }
+    /**
+     * 服务条款
+     * */
+    @RequestMapping(params = "server")
+    public ModelAndView server(HttpServletRequest request) {
+
+        String sql=" SELECT * FROM news WHERE news_sour ='2' ORDER BY news_time DESC LIMIT 1 ";
+        List<Map<String,Object>> AboutList=this.systemService.findForJdbc(sql);
+        request.setAttribute("AboutList",AboutList);
+
+        return new ModelAndView("com/showpro");
     }
 }
